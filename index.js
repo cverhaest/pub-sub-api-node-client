@@ -21,6 +21,16 @@ const {
     PUB_SUB_EVENT_RECEIVE_LIMIT
 } = process.env;
 
+var SALESFORCE_LOGIN_URL = process.env.SALESFORCE_LOGIN_URL;
+var SALESFORCE_USERNAME = process.env.SALESFORCE_USERNAME;
+var SALESFORCE_PASSWORD = process.env.SALESFORCE_PASSWORD;
+var SALESFORCE_TOKEN = process.env.SALESFORCE_TOKEN;
+var PUB_SUB_ENDPOINT = process.env.PUB_SUB_ENDPOINT;
+var PUB_SUB_PROTO_FILE = process.env.PUB_SUB_PROTO_FILE;
+var PUB_SUB_TOPIC_NAME = process.env.PUB_SUB_TOPIC_NAME;
+var PUB_SUB_EVENT_RECEIVE_LIMIT = process.env.PUB_SUB_EVENT_RECEIVE_LIMIT;
+
+
 /**
  * Connects to Salesforce using jsForce
  * This is required to obtain an access token that the Pub/Sub API uses.
