@@ -9,7 +9,7 @@ const avro = require('avro-js');
 const certifi = require('certifi');
 
 // Load config from .env file
-require('dotenv').config();
+/*require('dotenv').config();
 const {
     SALESFORCE_LOGIN_URL,
     SALESFORCE_USERNAME,
@@ -19,7 +19,7 @@ const {
     PUB_SUB_PROTO_FILE,
     PUB_SUB_TOPIC_NAME,
     PUB_SUB_EVENT_RECEIVE_LIMIT
-} = process.env;
+} = process.env;*/
 
 var SALESFORCE_LOGIN_URL = process.env.SALESFORCE_LOGIN_URL;
 var SALESFORCE_USERNAME = process.env.SALESFORCE_USERNAME;
