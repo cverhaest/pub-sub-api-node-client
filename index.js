@@ -63,6 +63,10 @@ function connectToPubSubApi(sfConnection) {
     const packageDef = protoLoader.loadSync(PUB_SUB_PROTO_FILE, {});
     const grpcObj = grpc.loadPackageDefinition(packageDef);
     const sfdcPackage = grpcObj.eventbus.v1;
+    
+    console.log(`accessToken: ${sfConnection.accessToken}`);
+	console.log(`instanceUrl: ${sfConnection.instanceUrl}`);
+	console.log(`tenantid: ${sfConnection.userInfo.organizationId}`);
 
     // Prepare gRPC connection
     const metaCallback = (_params, callback) => {
