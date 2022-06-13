@@ -97,6 +97,8 @@ function connectToPubSubApi(sfConnection) {
  * @returns {Object} parsed event schema `{id: string, type: Object}`
  */
 async function getEventSchema(client, topicName) {
+	console.log(`getEventSchema - START - topicName: ${topicName}`);
+	
     return new Promise((resolve, reject) => {
         client.GetTopic({ topicName }, (err, response) => {
             if (err) {
