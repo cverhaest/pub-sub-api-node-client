@@ -101,6 +101,9 @@ async function getEventSchema(client, topicName) {
 	
     return new Promise((resolve, reject) => {
         client.GetTopic({ topicName }, (err, response) => {
+        	console.log(`getEventSchema - err: ${err}`);
+        	console.log(`getEventSchema - response: ${response}`);
+        
             if (err) {
                 // Handle error
                 reject(err);
