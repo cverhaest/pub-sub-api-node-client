@@ -72,8 +72,8 @@ function connectToPubSubApi(sfConnection) {
     const metaCallback = (_params, callback) => {
         const meta = new grpc.Metadata();
         meta.add('accesstoken', sfConnection.accessToken);
-        //meta.add('instanceurl', sfConnection.instanceUrl);
-        meta.add('instanceurl', 'https://na141.my.salesforce.com');
+        meta.add('instanceurl', sfConnection.instanceUrl);
+        //meta.add('instanceurl', 'https://na141.my.salesforce.com');
         meta.add('tenantid', sfConnection.userInfo.organizationId);
         callback(null, meta);
     };
